@@ -1,11 +1,21 @@
 {
-  "name": "nuxi-workspace",
+  "name": "nuxi",
+  "version": "3.34.0",
   "type": "module",
-  "private": true,
   "packageManager": "pnpm@10.32.0",
-  "description": "⚡️ Nuxt Generation CLI Experience",
+  "description": "⚡️ Nuxt Generation CLI Experience with performance optimizations",
   "license": "MIT",
-  "repository": "nuxt/cli",
+  "repository": "tomsour1s/cli",
+  "bin": {
+    "nuxi": "./packages/nuxi/bin/nuxi.mjs",
+    "nuxt": "./packages/nuxi/bin/nuxi.mjs"
+  },
+  "exports": "./packages/nuxi/dist/index.mjs",
+  "types": "./packages/nuxi/dist/index.d.mts",
+  "files": [
+    "packages/nuxi/bin",
+    "packages/nuxi/dist"
+  ],
   "scripts": {
     "build": "pnpm -r build",
     "dev": "pnpm -r build --watch",
